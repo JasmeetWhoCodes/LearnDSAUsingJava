@@ -2,26 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-
-class Node {
-  int data;
-  Node left;
-  Node right;
-
-  Node(int data) {
-    this.data = data;
-    left = null;
-    right = null;
-  }
-  Node(int data, Node left, Node right)
-  {
-    this.data=data;
-    this.left=left;
-    this.right=right;
-  }
-}
-
-class BinaryTreeToBST {
+public class BinaryTreeToBST {
   int globalIndex = 0;
   // The given root is the root of the Binary Tree
   // Return the root of the generated BST
@@ -58,10 +39,7 @@ class BinaryTreeToBST {
         resultList); //Replace the existing tree data elements with new data elements as specified in resultList
     return root; //because we replaced the data in the existing tree itself
   }
-}
-
-class Driver {
-
+  //DRIVER CODE HELPER FUNCTION
   public static void printInorder(Node node)
   {
     if(node!=null)
@@ -71,6 +49,7 @@ class Driver {
       printInorder(node.right);
     }
   }
+  //DRIVER CODE MAIN FUNCTION
   public static void main(String args[]) {
     Node leftNode = new Node (1);
     Node rightNode = new Node(2);
@@ -79,7 +58,7 @@ class Driver {
     printInorder(root);
 
     BinaryTreeToBST binaryTreeToBST = new BinaryTreeToBST();
-    binaryTreeToBST.binaryTreeToBST(root);
+    root = binaryTreeToBST.binaryTreeToBST(root);
     System.out.println("\nNormal binary tree AFTER conversion to binary search tree: ");
     printInorder(root);
   }

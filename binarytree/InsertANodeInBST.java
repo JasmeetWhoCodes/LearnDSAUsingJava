@@ -34,12 +34,12 @@ public class InsertANodeInBST {
     Node leftNode = new Node (1);
     Node rightNode = new Node(4);
     Node root = new Node(3,leftNode,rightNode);
-    System.out.println("\nNormal binary tree BEFORE conversion to binary search tree: ");
+    System.out.println("\nNormal binary tree BEFORE Insertion to binary search tree: ");
     printInorder(root);
 
     InsertANodeInBST insertANodeInBST = new InsertANodeInBST();
     root = insertANodeInBST.insert(root, 30);
-    System.out.println("\nNormal binary tree AFTER conversion to binary search tree: ");
+    System.out.println("\nNormal binary tree AFTER Insertion to binary search tree: ");
     printInorder(root);
   }
 }

@@ -5,7 +5,7 @@ public class GetMinFromStack {
   public static void main(String args[]) {
     Scanner inputScanner = new Scanner(System.in);
     int requiredNoOfOperations = inputScanner.nextInt();  //Total number of Push/Pop/Get Minimum elements Operations required
-    Stack stack = new Stack();
+    MinStack stack = new MinStack();
     while (requiredNoOfOperations > 0) {
       int operationType = inputScanner.nextInt();
       if (operationType == 1) {  //OperationType equals 1 means, push an element on top of the stack
@@ -35,7 +35,7 @@ class Element {
   }
 }
 
-class Stack {
+class MinStack {
   Element top = null;
   int size = 0;
 
